@@ -158,7 +158,7 @@ export default function Home() {
       </div>
       <Fireworks_Right>
         <div data-fireworks='right'>
-          {
+          {/* {
             BallShow2 &&
             <Lottie
               options={Fireworks}
@@ -167,7 +167,7 @@ export default function Home() {
               isStopped={false}
               isPaused={false}
             />
-          }
+          } */}
         </div>
       </Fireworks_Right>
       {/* <Fireworks_Right>
