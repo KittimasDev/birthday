@@ -92,7 +92,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setBall2(true)
-    }, 8000);
+    }, 2000);
   }, [])
 
   return (
@@ -100,24 +100,24 @@ export default function Home() {
       <div className="card animate__animated animate__tada">
         <Flower >
           {
-            HappyTime &&
-            <Lottie
-              options={defaultOptions}
-              height={"100%"}
-              width={"100%"}
-              isStopped={false}
-              isPaused={false}
-            />
+            // HappyTime &&
+            // <Lottie
+            //   options={defaultOptions}
+            //   height={"100%"}
+            //   width={"100%"}
+            //   isStopped={false}
+            //   isPaused={false}
+            // />
           }
                    {
-            HappyTime &&
-            <Lottie
-              options={Ribbon}
-              height={"100%"}
-              width={"100%"}
-              isStopped={false}
-              isPaused={false}
-            />
+            // HappyTime &&
+            // <Lottie
+            //   options={Ribbon}
+            //   height={"100%"}
+            //   width={"100%"}
+            //   isStopped={false}
+            //   isPaused={false}
+            // />
           }
         </Flower>
         <div className="back"></div>
@@ -170,7 +170,7 @@ export default function Home() {
           }
         </div>
       </Fireworks_Right>
-      <Fireworks_Right>
+      {/* <Fireworks_Right>
         <div data-fireworks='right'>
           {
             HappyTime &&
@@ -183,7 +183,7 @@ export default function Home() {
             />
           }
         </div>
-      </Fireworks_Right>
+      </Fireworks_Right> */}
     </body>
   );
 }
