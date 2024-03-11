@@ -7,9 +7,11 @@ import Lottie from 'react-lottie';
 import * as animationData from '../public/anime/Animation - 1709889088251.json'
 import * as animationData_1 from '../public/anime/animetion_1.json'
 import * as animationData_2 from '../public/anime/animetion_2.json'
-import * as Ball from '../public/anime/animetion_3.json'
+import * as animationData_3 from '../public/anime/animetion_3.json'
 import * as LR_S from '../public/anime/animetion_4.json'
 import * as animationData_5 from '../public/anime/animation_5.json'
+import * as animationData_6 from '../public/anime/animation_5.json'
+
 
 
 export default function Home() {
@@ -40,12 +42,45 @@ export default function Home() {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+
+  const Fireworks = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData_6,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const Ball = {
+    loop: false,
+    autoplay: true,
+    animationData: animationData_3,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
   const [HappyTime, setHappyTime] = useState(false)
+  const [BallShow, setBall] = useState(false)
+  const [BallShow2, setBall2] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
       setHappyTime(true)
     }, 2200);
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBall(true)
+    }, 1600);
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBall2(true)
+    }, 2000);
   }, [])
 
   return (
@@ -85,21 +120,19 @@ export default function Home() {
           <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
           <p>Hope your day goes great!</p>
         </div>
-      </div>
-      {/* <Fireworks_left>
-        <div data-fireworks='left'>
+        <BallLayout>
           {
-            HappyTime &&
+            BallShow &&
             <Lottie
-              options={FireworksLeft}
+              options={Ball}
               height={"100%"}
               width={"100%"}
               isStopped={false}
               isPaused={false}
             />
           }
-        </div>
-      </Fireworks_left> */}
+        </BallLayout>
+      </div>
       <Fireworks_Right>
         <div data-fireworks='right'>
           {
@@ -158,8 +191,27 @@ const Fireworks_left = styled.div`
 `
 
 const Fireworks_Right = styled.div`
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    [data-fireworks='right']
+    {
+      width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 992) {
+      max-width: 320px;
+    }
+    
+`
+
+const BallLayout = styled.div`
+    position: absolute;
+    bottom: 0;
+    max-width: 320px;
+    width: 100%;
+    /* height: 100%; */
 `
