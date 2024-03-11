@@ -9,8 +9,11 @@ import * as animationData_1 from '../public/anime/animetion_1.json'
 import * as animationData_2 from '../public/anime/animetion_2.json'
 import * as animationData_3 from '../public/anime/animetion_3.json'
 import * as LR_S from '../public/anime/animetion_4.json'
+import * as animationData_4 from '../public/anime/animation_5.json'
 import * as animationData_5 from '../public/anime/animation_5.json'
-import * as animationData_6 from '../public/anime/animation_5.json'
+import * as animationData_6 from '../public/anime/animation_6.json'
+import * as animationData_7 from '../public/anime/animation_7.json'
+
 
 
 
@@ -37,7 +40,7 @@ export default function Home() {
   const FireworksRight = {
     loop: true,
     autoplay: true,
-    animationData: animationData_5,
+    animationData: animationData_4,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -53,9 +56,18 @@ export default function Home() {
   };
 
   const Ball = {
-    loop: false,
+    loop: true,
     autoplay: true,
     animationData: animationData_3,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const Ribbon = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData_7,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -80,7 +92,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setBall2(true)
-    }, 2000);
+    }, 8000);
   }, [])
 
   return (
@@ -91,6 +103,16 @@ export default function Home() {
             HappyTime &&
             <Lottie
               options={defaultOptions}
+              height={"100%"}
+              width={"100%"}
+              isStopped={false}
+              isPaused={false}
+            />
+          }
+                   {
+            HappyTime &&
+            <Lottie
+              options={Ribbon}
               height={"100%"}
               width={"100%"}
               isStopped={false}
@@ -110,13 +132,13 @@ export default function Home() {
                 <div className="hbd animate__animated animate__rubberBand">Happy Birthday</div>
               </View>
               <Name>
-                <div className="animate__animated animate__rubberBand">Best</div>
+                <div className="animate__animated animate__rubberBand">Test</div>
               </Name>
             </div>
           </div>
         </div>
         <div className="text-container">
-          <p id="head">Happy Birthday அத்தான்!</p>
+          <p id="head">Happy Birthday</p>
           <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
           <p>Hope your day goes great!</p>
         </div>
@@ -132,7 +154,22 @@ export default function Home() {
             />
           }
         </BallLayout>
+
       </div>
+      <Fireworks_Right>
+        <div data-fireworks='right'>
+          {
+            BallShow2 &&
+            <Lottie
+              options={Fireworks}
+              height={"100%"}
+              width={"100%"}
+              isStopped={false}
+              isPaused={false}
+            />
+          }
+        </div>
+      </Fireworks_Right>
       <Fireworks_Right>
         <div data-fireworks='right'>
           {
@@ -174,6 +211,7 @@ const Name = styled.div`
 
 const Flower = styled.div`
   animation: ${animationMenu} 2.2s;
+  pointer-events: none;
   div
   {
     position: absolute;
@@ -196,6 +234,7 @@ const Fireworks_Right = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
+    pointer-events: none;
     transform: translate(-50%, -50%);
     [data-fireworks='right']
     {
@@ -213,5 +252,6 @@ const BallLayout = styled.div`
     bottom: 0;
     max-width: 320px;
     width: 100%;
+    pointer-events: none;
     /* height: 100%; */
 `
