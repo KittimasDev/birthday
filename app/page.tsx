@@ -100,14 +100,14 @@ export default function Home() {
       <div className="card animate__animated animate__tada">
         <Flower >
           {
-            HappyTime &&
-            <Lottie
-              options={defaultOptions}
-              height={"100%"}
-              width={"100%"}
-              isStopped={false}
-              isPaused={false}
-            />
+            // HappyTime &&
+            // <Lottie
+            //   options={defaultOptions}
+            //   height={"100%"}
+            //   width={"100%"}
+            //   isStopped={false}
+            //   isPaused={false}
+            // />
           }
                    {
             HappyTime &&
@@ -156,7 +156,7 @@ export default function Home() {
         </BallLayout>
 
       </div>
-      <Fireworks_Right>
+      {/* <Fireworks_Right>
         <div data-fireworks='right'>
           {
             BallShow2 &&
@@ -169,7 +169,7 @@ export default function Home() {
             />
           }
         </div>
-      </Fireworks_Right>
+      </Fireworks_Right> */}
       <Fireworks_Right>
         <div data-fireworks='right'>
           {
