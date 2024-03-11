@@ -153,7 +153,7 @@ export default function Home() {
             />
           }
         </BallLayout>
-      <Fireworks_Right>
+      {/* <Fireworks_Right>
         <div data-fireworks='right'>
           {
             HappyTime &&
@@ -166,7 +166,7 @@ export default function Home() {
             />
           }
         </div>
-      </Fireworks_Right>
+      </Fireworks_Right> */}
       </div>
       <Fireworks_Right>
         <div data-fireworks='right'>
