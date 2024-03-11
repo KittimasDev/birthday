@@ -159,8 +159,7 @@ const Fireworks_left = styled.div`
 
 const Fireworks_Right = styled.div`
     position: absolute;
-    /* bottom: -20px;
-    right: -30px;
-    max-width: 200px; */
-    rotate: 8deg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 `
