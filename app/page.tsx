@@ -144,14 +144,14 @@ export default function Home() {
         </div>
         <BallLayout>
           {
-            BallShow &&
-            <Lottie
-              options={Ball}
-              height={"100%"}
-              width={"100%"}
-              isStopped={false}
-              isPaused={false}
-            />
+            // BallShow &&
+            // <Lottie
+            //   options={Ball}
+            //   height={"100%"}
+            //   width={"100%"}
+            //   isStopped={false}
+            //   isPaused={false}
+            // />
           }
         </BallLayout>
 
@@ -170,7 +170,7 @@ export default function Home() {
           } */}
         </div>
       </Fireworks_Right>
-      {/* <Fireworks_Right>
+      <Fireworks_Right>
         <div data-fireworks='right'>
           {
             HappyTime &&
@@ -183,7 +183,7 @@ export default function Home() {
             />
           }
         </div>
-      </Fireworks_Right> */}
+      </Fireworks_Right>
     </body>
   );
 }
