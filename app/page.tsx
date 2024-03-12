@@ -138,8 +138,8 @@ export default function Home() {
         </div>
         <div className="text-container">
           <p id="head">Happy Birthday</p>
-          <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
-          <p>Hope your day goes great!</p>
+          <p>Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
+          <p></p>
         </div>
         <BallLayout>
           {

@@ -139,7 +139,7 @@ body {
   z-index: 999; */
 }
 
-/* .card:hover .front {
+.card:hover .front {
   transform: perspective(800px) rotateY(-170deg);
   background-color: #41718d;
 }
@@ -148,7 +148,7 @@ body {
   box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3),
     inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
   background-color: #d2dcd2;
-} */
+}
 .card .back {
   position: absolute;
   width: 100%;
