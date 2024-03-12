@@ -28,6 +28,9 @@ export default function RootLayout({
         />
       </head>
       <StyledComponentsRegistry>
+        <audio controls autoPlay={true}>
+          <source src="/hbd.mp3" type="audio/mpeg" />
+        </audio>
         <body className={inter.className}>
           {children}
         </body>
